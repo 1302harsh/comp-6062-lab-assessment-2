@@ -5,7 +5,7 @@ const app = Vue.createApp({
         return {
             studentName:'Harsh Prajapati',
             pressure: 50,
-            indicatorsLevels: [
+            indicatorLevels: [
                 { id: 'danger-low', status: 'danger', label: 'Danger - Low!', min: 0, max: 10 },
                 { id: 'warn-low', status: 'warn', label: 'Warning - Low', min: 11, max: 30 },
                 { id: 'safe', status: 'safe', label: 'Safe', min: 31, max: 70 },
@@ -18,7 +18,7 @@ const app = Vue.createApp({
     methods: {
         isActive(level) {
             /// Logic here for if the pressure is within the level parameters return boolean
-            
+            return this.pressure >= level.min && this.pressure <= level.max ;
         }
     }
 });

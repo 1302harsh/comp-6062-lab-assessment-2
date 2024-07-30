@@ -16,7 +16,7 @@
                     <h1>Pressure Monitor Interface - {{studentName}}</h1>
                 </header>
                 <p>Pressure:<strong>{{pressure}}</strong></p>
-                <input type="range" v-model="pressure" min="0" max="100">
+                <input type="range" v-model="pressure" id="points" name="points" min="0" max="100">
                 <div v-for="level in indicatorLevels" :key="level.id" :class="['indicator', level.status, { 'inactive': !isActive(level)}]">{{ level.label }}</div>
 
                 <footer>
